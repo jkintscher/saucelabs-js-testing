@@ -1,0 +1,6 @@
+{
+  "name": "hacksgiving",
+  "dependencies": {
+    "qunit": "1.12.0"
+  }
+}
