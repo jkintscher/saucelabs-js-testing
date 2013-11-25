@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         options: {
           urls: ["http://127.0.0.1:9999/tests/index.html"],
           tunnelTimeout: 5,
-          concurrency: 3,
+          concurrency: 2,
           browsers: browsers,
           testname: "qunit unit tests",
           tags: ["master"]
