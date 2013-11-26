@@ -11,7 +11,7 @@
     "grunt-contrib-connect": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3",
 
-    "karma": "~0.12",
+    "karma": "~0.10",
     "grunt-karma": "~0.6.2",
     "karma-qunit": "~0.1.1",
     "karma-sauce-launcher": "~0.1.1"
