@@ -1,26 +1,11 @@
 module.exports = function(grunt) {
   var browsers = [{
-    browserName: "firefox",
-    version: "19",
-    platform: "XP"
-  }, {
-    browserName: "chrome",
-    platform: "XP"
-  }, {
-    browserName: "chrome",
-    platform: "linux"
-  }, {
-    browserName: "internet explorer",
-    platform: "WIN8",
-    version: "10"
-  }, {
     browserName: "internet explorer",
     platform: "VISTA",
-    version: "9"
+    version: "8"
   }, {
-    browserName: "opera",
-    platform: "Windows 2008",
-    version: "12"
+    browserName: "chrome",
+    platform: "XP"
   }];
 
   grunt.initConfig({
@@ -39,8 +24,12 @@ module.exports = function(grunt) {
           tunnelTimeout: 5,
           concurrency: 2,
           browsers: browsers,
-          testname: "qunit unit tests",
-          tags: ["master"]
+          detailedError: true,
+          testname: "Hacksgiving Units",
+          tags: ["master"],
+          onTestComplete: function(status, page, config, browser) {
+            console.log("Browser: ", config.browserName, config.version, "on", config.platform);
+          }
         }
       }
     },
