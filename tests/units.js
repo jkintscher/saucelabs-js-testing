@@ -2,10 +2,10 @@ test("hello test", function() {
   ok(1 == "1", "Passed!");
 });
 
-test("it really fails", function() {
-  ok(1 === "1", "Type-unsafe comparison works!");
-});
-
-test("it works", function() {
-  equal("Foobar", "Foobar", "Strings are equal");
+test("it breaks in IE<9", function() {
+  if (window.attachEvent && !window.addEventListener) {
+    ok(false, "IE<9 breaks.");
+  } else {
+    ok(true, "Everything else works fine");
+  }
 });
