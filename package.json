@@ -2,22 +2,24 @@
   "name": "hacksgiving",
   "version": "0.0.1",
   "description": "Delicious like the pilgrims' turkey.",
-  "dependencies": {},
+
+  "scripts": {
+    "postinstall": "bower install",
+    "test": "grunt test"
+  },
+
+  "dependencies": {
+  },
   "devDependencies": {
     "bower": "~1.2.7",
-
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.9",
     "grunt-contrib-connect": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3",
-
-    "karma": "~0.10",
-    "grunt-karma": "~0.6.2",
+    "karma": "~0.11",
+    "grunt-karma": "~0.7.1",
+    "grunt-karma": "https://github.com/karma-runner/grunt-karma/archive/a8472d47240a71673cb5601acba6a093fe7387c1.tar.gz",
     "karma-qunit": "~0.1.1",
     "karma-sauce-launcher": "~0.1.1"
-  },
-  "scripts": {
-    "postinstall": "bower install",
-    "test": "grunt test"
   }
 }
