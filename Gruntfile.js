@@ -1,6 +1,4 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-karma');
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -12,6 +10,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     watch: {},
 
     karma: {
@@ -23,6 +22,13 @@ module.exports = function(grunt) {
     }
   });
 
+  // Loading dependencies
+  for(var key in grunt.file.readJSON('package.json').devDependencies) {
+      if(key !== 'grunt' && key.indexOf('grunt') === 0)
+        grunt.loadNpmTasks(key);
+  }
+
+  grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('test', ['karma:unit']);
   grunt.registerTask('default', ['test']);
 };
