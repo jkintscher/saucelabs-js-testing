@@ -1,8 +1,5 @@
-module('Units - Dummy Tests', {
-});
-
-test("it compares strings with integers", function() {
-  ok(1 == "1", "Passed!");
+test("it knows math", function() {
+  equal(1 + 1, 2);
 });
 
 test("it breaks in IE<9", function() {
