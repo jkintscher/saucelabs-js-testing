@@ -12,8 +12,8 @@ In order to run your tests on SauceLabs with Karma you need to  make your userna
 and access key available to Grunt task. In your terminal session, run:
 
 ````bash
-export SAUCE_USERNAME=<my-username>
-export SAUCE_ACCESS_KEY=<my-access-key>
+export SAUCE_USERNAME=my-username
+export SAUCE_ACCESS_KEY=my-access-key
 ````
 
 **Never, ever set them directly in `karma.conf.js`!**
