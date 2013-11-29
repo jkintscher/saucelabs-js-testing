@@ -4,7 +4,7 @@ Install all that’s needed with a simple
 
 `$ npm install`
 
-To see all dependencies, take a look at the `package.json` and `bower.json`.
+*(To see all dependencies, take a look at the `package.json` and `bower.json`.)*
 
 # Set up
 
@@ -21,9 +21,12 @@ export SAUCE_ACCESS_KEY=my-access-key
 # Tunneling
 
 If you want Karma to open a tunnel to SauceLabs for your, set `sauceLabsl.startConnect`
-to `true`. Because this can be slow it might be a good idea to re-use an already
-open tunnel. All that’s needed for this is in [the docs](https://saucelabs.com/docs/connect).
-Using Sauce Connect will not require *any* config changes.
+in `karma.conf.js` to `true`. Because this can be slow it might be a good idea to
+re-use an already open tunnel.
+
+All that’s needed for this is in [the docs](https://saucelabs.com/docs/connect).
+Using Sauce Connect will not require you to make *any* config changes and is the
+faster and recommended way to go.
 
 # Run Your Tests
 
