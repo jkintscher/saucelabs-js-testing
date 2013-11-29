@@ -1,3 +1,6 @@
+This is the minimal setup necessary to run Automated, Concurrent, Cross-Browser
+JS Unit (and Acceptance) Tests on SauceLabs infrastructure.
+
 # Dependencies
 
 Install all that’s needed with a simple
